@@ -1,11 +1,34 @@
-# Requisito 1
+import requests
+import time
+from parsel import Selector
+
+
 def fetch(url):
-    """Seu código deve vir aqui"""
+    try:
+        response = requests.get(
+            url, {"user-agent": "Fake user-agent"}, timeout=3
+        )
+
+        if response.status_code != 200:
+            raise requests.RequestException
+
+    except (requests.RequestException):
+        return None
+
+    else:
+        return response.text
+
+    finally:
+        time.sleep(1)
 
 
-# Requisito 2
 def scrape_updates(html_content):
-    """Seu código deve vir aqui"""
+
+    selector = Selector(text=html_content)
+
+    links_list = selector.css("h2 a::attr(href)").getall()
+
+    return links_list
 
 
 # Requisito 3
