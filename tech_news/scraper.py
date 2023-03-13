@@ -6,7 +6,7 @@ from parsel import Selector
 def fetch(url):
     try:
         response = requests.get(
-            url, {"user-agent": "Fake user-agent"}, timeout=3
+            url, headers={"user-agent": "Fake user-agent"}, timeout=3
         )
 
         if response.status_code != 200:
@@ -23,7 +23,6 @@ def fetch(url):
 
 
 def scrape_updates(html_content):
-
     selector = Selector(text=html_content)
 
     links_list = selector.css("h2 a::attr(href)").getall()
@@ -33,7 +32,11 @@ def scrape_updates(html_content):
 
 # Requisito 3
 def scrape_next_page_link(html_content):
-    """Seu código deve vir aqui"""
+    selector = Selector(text=html_content)
+
+    next_page = selector.css("a.next::attr(href)").get()
+
+    return next_page
 
 
 # Requisito 4
