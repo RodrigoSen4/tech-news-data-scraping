@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  news:
+    build: .
+    image: tech_news_image
+    volumes:
+      - ./:/app
+    container_name: tech_news
+    tty: true # docker run -t
+    stdin_open: true # docker run -i
+    command: bash
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+    environment:
+      - DB_HOST=mongodb
+    networks:
+      - tech_news_net
+
+  mongodb:
+    image: mongo:4.4.14
+    container_name: tech_news_db
+    volumes:
+      - ./:/app
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    networks:
+      - tech_news_net
+
+networks:
+  tech_news_net:
+    driver: bridge
