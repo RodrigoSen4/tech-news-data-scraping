@@ -59,7 +59,6 @@ def scrape_news(html_content):
     }
 
 
-# Requisito 5
 def get_tech_news(amount):
     limit = amount
     page = fetch("https://blog.betrybe.com")
