@@ -61,6 +61,7 @@ def scrape_news(html_content):
 
 # Requisito 5
 def get_tech_news(amount):
+    limit = amount
     page = fetch("https://blog.betrybe.com")
     news = []
 
@@ -71,10 +72,10 @@ def get_tech_news(amount):
             news_page = fetch(link)
             news.append(scrape_news(news_page))
 
-            if len(news) >= amount:
+            if len(news) >= limit:
                 break
 
-        if len(news) >= amount:
+        if len(news) >= limit:
             break
 
         else:
