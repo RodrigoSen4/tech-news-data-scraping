@@ -69,4 +69,19 @@ python3 -m pip install -r dev-requirements.txt
   
   Lembre-se de que o mongoDB utilizará por padrão a porta 27017. Se já houver outro serviço utilizando esta porta, considere desativá-lo.
 
+  <strong>Executando o crawler</strong>
+
+1. Executar o aquivo scraper dentro do ambiente do python 
+
+  ```bash
+ python3 -i tech_news/scraper.py
+  ```
+
+2. Executar a função get_tech_news(n) onde "n" é a quantidade de noticas a serem raspadas e salvas no banco de dados
+
+  ```bash
+get_tech_news(n)
+  ```
+
+
 </details>
