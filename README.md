@@ -1,6 +1,6 @@
 # Tech News
 
-  <strong>🤷🏽‍♀️ Como entregar</strong><br />
+  <strong>🤷🏽‍♀️ Como entregar</strong><br/>
 
 
   <strong>👨‍💻 Foi desenvolvidor um crawler </strong></><br />
