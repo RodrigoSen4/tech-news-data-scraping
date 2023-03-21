@@ -83,5 +83,3 @@ def get_tech_news(amount):
 
     create_news(news)
     return news
-
-# Insira na função abaixo a quantidade de noticias a serem raspadas.
