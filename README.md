@@ -1,13 +1,70 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Tech News
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+  <strong>👨‍💻 Foi desenvolvidor um crawler</strong></><br />
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+  O projeto tem como principal objetivo fazer consultas em notícias sobre tecnologia no [_blog da Trybe_](https://blog.betrybe.com).
+
+
+  <strong>🚵 Habilidades:</strong>
+  <ul>
+    <li>Utilizar o terminal interativo do Python</li>
+    <li>Aplicar técnicas de raspagem de dados</li>
+    <li>Extrair dados de conteúdo HTML</li>
+    <li>Armazenar os dados obtidos em um banco de dados (MongoDB)</li>
+  </ul>
+
+# Orientações
+
+<details>
+
+  <summary><strong>🏕️ Ambiente Virtual</strong></summary><br />
+  O Python oferece um recurso chamado de ambiente virtual, onde permite sua máquina rodar sem conflitos, diferentes tipos de projetos com diferentes versões de bibliotecas.
+
+  1. **criar o ambiente virtual**
+
+  ```bash
+python3 -m venv .venv
+  ```
+
+  2. **ativar o ambiente virtual**
+
+  ```bash
+source .venv/bin/activate
+  ```
+
+  3. **instalar as dependências no ambiente virtual**
+
+  ```bash
+python3 -m pip install -r dev-requirements.txt
+  ```
+
+  Com o seu ambiente virtual ativo, as dependências serão instaladas neste ambiente.
+  Quando precisar desativar o ambiente virtual, execute o comando "deactivate". Lembre-se de ativar novamente quando voltar a trabalhar no projeto.
+
+  O arquivo `dev-requirements.txt` contém todas as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`.
+
+</details>
+
+<details>
+  <summary><strong>🏃🏾 Executando o Projeto</strong></summary>
+  As notícias a serem raspadas estarão disponíveis no _Blog da Trybe_: https://blog.betrybe.com.
+  Essas notícias devem são salvas no banco de dados.
+
+  <strong>MongoDB</strong>
+
+  Para a realização deste projeto, utilizaremos um banco de dados chamado `tech_news`.
+  As notícias serão armazenadas em uma coleção chamada `news`.
+
+  Rodar MongoDB via Docker:
+
+  <code>docker-compose up -d mongodb</code> no terminal.
+  Para mais detalhes acerca do mongo com o docker, olhe o arquivo `docker-compose.yml`
+
+  Caso queira instalar e rodar o servidor MongoDB nativo na máquina, siga as instruções no tutorial oficial:
+
+  Ubuntu: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/>
+  MacOS:  <https://docs.mongodb.com/guides/server/install/>
+  
+  Lembre-se de que o mongoDB utilizará por padrão a porta 27017. Se já houver outro serviço utilizando esta porta, considere desativá-lo.
+
+</details>
