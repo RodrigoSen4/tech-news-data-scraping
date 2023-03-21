@@ -48,7 +48,7 @@ python3 -m pip install -r dev-requirements.txt
 <details>
   <summary><strong>🏃🏾 Executando o Projeto</strong></summary>
   As notícias a serem raspadas estarão disponíveis no _Blog da Trybe_: https://blog.betrybe.com.
-  Essas notícias devem são salvas no banco de dados.
+  Essas notícias devem são salvas no banco de dados.<br />
 
   <strong>MongoDB</strong>
 
