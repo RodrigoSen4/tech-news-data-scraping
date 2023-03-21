@@ -1,9 +1,6 @@
 # Tech News
 
-  <strong>🤷🏽‍♀️ Como entregar</strong><br/>
-
-
-  <strong>👨‍💻 Foi desenvolvidor um crawler </strong></><br />
+  <strong>👨‍💻 Foi desenvolvidor um crawler </strong><br/>
 
   O projeto tem como principal objetivo fazer consultas em notícias sobre tecnologia no [_blog da Trybe_](https://blog.betrybe.com).
 
